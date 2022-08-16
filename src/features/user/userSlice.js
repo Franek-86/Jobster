@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { axiosThing } from '../../utils/axiosThing'
 import { toast } from 'react-toastify'
 import { getFromStorage, setStorage, removeStorage } from '../../utils/storage'
 
@@ -9,8 +8,6 @@ import {
   regReturn,
   updReturn,
 } from '../user/userThunk'
-import { Navigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 
 const initialState = {
   user: getFromStorage(),

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { toast } from 'react-toastify'
+
 import { clearEverything } from '../features/user/userSlice'
 
 import { getFromStorage } from './storage'
@@ -8,13 +8,13 @@ export const axiosThing = axios.create({
   baseURL: 'https://jobify-prod.herokuapp.com/api/v1/toolkit',
 })
 
-const user = getFromStorage()
-if (user) {
-  axiosThing.interceptors.request.use((config) => {
+axiosThing.interceptors.request.use((config) => {
+  const user = getFromStorage()
+  if (user) {
     config.headers['Authorization'] = `Bearer ${user.token}`
     return config
-  })
-}
+  }
+})
 
 // axiosThing.interceptors.request.use(
 //   (config) => {

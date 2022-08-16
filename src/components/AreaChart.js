@@ -9,8 +9,6 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 
-import { LineChart, Line } from 'recharts'
-
 const AreaCharts = ({ data }) => {
   //   In generale height 300
   // La chart deve avere Margin top 50

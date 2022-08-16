@@ -1,4 +1,3 @@
-import moment from 'moment'
 import React from 'react'
 // FaLocationArrow, FaBriefcase, FaCalendarAlt
 import Wrapper from '../assets/wrappers/JobInfo'

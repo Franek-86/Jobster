@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
-import { axiosThing } from '../../utils/axiosThing'
+
 import { getAllJobsThunk, getAllStats } from '../allJobs/allJobsThunk'
 
 export const getAllJobs = createAsyncThunk('allJobs/getJobs', getAllJobsThunk)

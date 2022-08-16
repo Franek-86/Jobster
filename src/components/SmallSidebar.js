@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom'
+
 import Wrapper from '../assets/wrappers/SmallSidebar'
 import { toggleSidebar } from '../features/user/userSlice'
 import Logo from './Logo'

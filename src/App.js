@@ -1,10 +1,9 @@
-import styled from 'styled-components'
 import { Error, Landing, Register } from '../src/pages'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { useEffect } from 'react'
+
 import { SharedLayout, Stats, AllJobs, AddJob, Profile } from './dashboard'
 import ProtectedRoute from './pages/ProtectedRoute'
 

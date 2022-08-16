@@ -1,14 +1,10 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+
 import { NavLink } from 'react-router-dom'
-import { toggleSidebar } from '../features/user/userSlice'
+
 import { links } from '../utils/links'
 
 const NavLinks = ({ toggle }) => {
-  //  const dispatch = useDispatch()
-  //  const toggle = ()=>{
-  // dispatch(toggleSidebar())
-  let activeClassName = 'underline'
   return (
     <div className='nav-links'>
       {links.map((i) => {

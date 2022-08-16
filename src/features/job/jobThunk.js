@@ -1,8 +1,6 @@
-import { useDispatch } from 'react-redux'
 import { axiosThing, unauthenticatedError } from '../../utils/axiosThing'
-import { getFromStorage } from '../../utils/storage'
 import { getAllJobs, hideLoading, showLoading } from '../allJobs/allJobsSlice'
-import { logoutUser } from '../user/userSlice'
+
 import { clearJob } from './jobSlice'
 
 // export const test = async (_, thunkAPI) => {
@@ -18,7 +16,6 @@ import { clearJob } from './jobSlice'
 
 export const postJobThunk = async (name, thunkAPI) => {
   try {
-    const user = getFromStorage()
     const resp = await axiosThing.post(
       '/jobs',
 
@@ -32,7 +29,6 @@ export const postJobThunk = async (name, thunkAPI) => {
 }
 
 export const deleteJobThunk = async (jobId, thunkAPI) => {
-  const user = getFromStorage()
   let url = jobId
   thunkAPI.dispatch(showLoading())
   try {
@@ -47,7 +43,6 @@ export const deleteJobThunk = async (jobId, thunkAPI) => {
 
 export const editJobThunk = async (name, thunkAPI) => {
   try {
-    const user = getFromStorage()
     const { editJobId, test } = name
     let url = editJobId
     const location = thunkAPI.getState().user.user.location

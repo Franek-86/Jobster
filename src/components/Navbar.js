@@ -1,19 +1,9 @@
 import React from 'react'
 import Wrapper from '../assets/wrappers/Navbar'
 import Logo from './Logo'
-import {
-  FaAlignLeft,
-  FaUserCircle,
-  FaCaretDown,
-  FaAlignRight,
-} from 'react-icons/fa'
+import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  toggleSidebar,
-  logoutUser,
-  clearEverything,
-} from '../features/user/userSlice'
-import { useNavigate } from 'react-router-dom'
+import { toggleSidebar, clearEverything } from '../features/user/userSlice'
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = React.useState(false)
@@ -21,7 +11,7 @@ const Navbar = () => {
   const dispatch = useDispatch()
   const toggle = () => dispatch(toggleSidebar())
   const clearEverythingLogout = () => dispatch(clearEverything('test'))
-  const navigate = useNavigate()
+
   return (
     <Wrapper>
       <div className='nav-center'>

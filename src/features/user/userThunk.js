@@ -1,13 +1,9 @@
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
-import { toast } from 'react-toastify'
 import { axiosThing, unauthenticatedError } from '../../utils/axiosThing'
 import { getFromStorage } from '../../utils/storage'
 import { clearFilters } from '../allJobs/allJobsSlice'
 import { clearJob } from '../job/jobSlice'
 import { logoutUser } from './userSlice'
-
-const user = getFromStorage()
 
 export const logReturn = async (name, thunkAPI) => {
   try {

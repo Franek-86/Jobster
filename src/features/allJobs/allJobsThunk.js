@@ -1,8 +1,5 @@
 import { axiosThing, unauthenticatedError } from '../../utils/axiosThing'
-import { getFromStorage } from '../../utils/storage'
-
 export const getAllJobsThunk = async (_, thunkAPI) => {
-  const user = getFromStorage()
   const { page, search, searchStatus, searchType, sort } =
     thunkAPI.getState().allJobs
   let url = `jobs?status=${searchStatus}&jobType=${searchType}&sort=${sort}&page=${page}`
@@ -18,7 +15,6 @@ export const getAllJobsThunk = async (_, thunkAPI) => {
 }
 
 export const getAllStats = async (_, thunkAPI) => {
-  const user = getFromStorage()
   try {
     const resp = await axiosThing.get('jobs/stats')
 

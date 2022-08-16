@@ -16,7 +16,6 @@ const AddJob = () => {
 
   const dispatch = useDispatch()
   const {
-    isLoading,
     position,
     company,
     jobLocation,
@@ -34,11 +33,12 @@ const AddJob = () => {
       let value = test
       dispatch(handleChange({ name, value }))
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleJobInput = (e) => {
     const name = e.target.name
-    const value = e.target.value
+    const value = e.target.value``
     dispatch(handleChange({ name, value }))
   }
 

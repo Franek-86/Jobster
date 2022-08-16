@@ -3,7 +3,6 @@ import { Outlet } from 'react-router-dom'
 import Wrapper from '../assets/wrappers/SharedLayout'
 import { Navbar, SmallSidebar, BigSidebar } from '../components'
 import { Stats, AllJobs, AddJob, Profile } from '../dashboard'
-
 const SharedLayout = () => {
   return (
     <Wrapper>
