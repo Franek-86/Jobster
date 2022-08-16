@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { axiosThing, unauthenticatedError } from '../../utils/axiosThing'
-import { getFromStorage } from '../../utils/storage'
 import { clearFilters } from '../allJobs/allJobsSlice'
 import { clearJob } from '../job/jobSlice'
 import { logoutUser } from './userSlice'
